@@ -6,6 +6,7 @@ Python dashboard for project tracking system metrics
 
 ### Backend
 - [ ] API
+  - [ ] Swagger
 - [ ] Database models
   - [ ] Migrations
   - [ ] Configuration environments
