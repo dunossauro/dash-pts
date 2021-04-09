@@ -14,9 +14,13 @@ Python dashboard for project tracking system metrics
 
 
 ### Graphs
-- [ ] Burn down
+- [x] Burn down
 - [ ] Velocity
 - [ ] Cumulative Flow
 
 ### Tests
 - [ ] Describe hooks
+
+### Integrations
+- [ ] Github Action
+- [ ] Codecov
