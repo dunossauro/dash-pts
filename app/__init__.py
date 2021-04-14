@@ -12,7 +12,16 @@ from app.graphs.velocity import velocity
 def create_app():
     app = Flask(__name__)
 
-    dash_app = Dash(__name__, server=app, url_base_pathname='/dash/')
+    dash_app = Dash(
+        __name__,
+        server=app,
+        url_base_pathname='/dash/',
+        external_stylesheets=[{
+            "href": "https://fonts.googleapis.com/css2?"
+            "family=Lato:wght@400;700&display=swap",
+            "rel": "stylesheet",
+        }]
+    )
 
     dash_app.layout = Div(
         children=[
@@ -21,7 +30,9 @@ def create_app():
                     P(children='📈', className='header-emoji'),
                     H1(children='Dash-PTS', className='header-title'),
                     P(
-                        children='A free and Open Source PTS tool:',
+                        children='''
+                        A Free and Open Source project-tracking systems tool:
+                        ''',
                         className='header-description',
                     ),
                     P(
@@ -39,9 +50,13 @@ def create_app():
                             Dropdown(
                                 id='department-name',
                                 options=[
-                                    {'label': i, 'value': i} for i in 'abcd'
+                                    {'label': i, 'value': i} for i in [
+                                        'Sales',
+                                        'R&D',
+                                        'Support'
+                                    ]
                                 ],
-                                value='a',
+                                value='R&D',
                                 className='dropdown'
                             )
                         ],
@@ -52,9 +67,14 @@ def create_app():
                             Dropdown(
                                 id='team-name',
                                 options=[
-                                    {'label': i, 'value': i} for i in 'abcd'
+                                    {'label': i, 'value': i} for i in [
+                                        'Data Science',
+                                        'Mobile',
+                                        'WEB',
+                                        'QA'
+                                    ]
                                 ],
-                                value='a',
+                                value='Mobile',
                                 className='dropdown'
                             )
                         ],
@@ -101,12 +121,12 @@ def create_app():
                 initial_data=datetime(2021, 4, 5),
                 final_data=datetime(2021, 4, 16),
                 total_points=50,
-                sprint_data=[50, 45, 41, 37, 39, 12],
+                sprint_data=[50, 45, 41, 37, 39, 39, 39, 35, 27, 13],
             ),
             velocity({
                 'names': ['Sprint ' + str(x) for x in range(1, 7)],
-                'commitment': list(range(1, 7)),
-                'completed': list(range(7, 15)),
+                'commitment': [50, 47, 61, 53, 50, 51],
+                'completed': [52, 43, 58, 58, 49, 39],
             })
         )
 
