@@ -41,7 +41,7 @@ def burn_down(sprint, initial_data, final_data, total_points, sprint_data):
             {  # Guide
                 'x': graph_period,
                 'y': guide(total_points, graph_period),
-                'name': 'Guia',
+                'name': 'Guides',
                 'type': 'scatter',
                 'mode': 'lines',
                 'line': {'color': 'grey', 'width': 3},
@@ -50,8 +50,15 @@ def burn_down(sprint, initial_data, final_data, total_points, sprint_data):
                 'x': graph_period,
                 'y': y,
                 'type': 'scatter',
-                'name': 'Pontos',
+                'name': 'Points',
                 'line': {'color': 'red', 'width': 3},
             },
-        ]
+        ],
+        'layout': {
+            'title': {
+                'text': 'Burn Down',
+                'x': 0.05,
+                'xanchor': 'left',
+            }
+        }
     }

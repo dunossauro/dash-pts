@@ -10,12 +10,12 @@ Python dashboard for project tracking system metrics
 - [ ] Database models
   - [ ] Migrations
   - [ ] Configuration environments
-- [ ] Flask + dash integration
+- [x] Flask + dash integration
 
 
 ### Graphs
 - [x] Burn down
-- [ ] Velocity
+- [x] Velocity
 - [ ] Cumulative Flow
 
 ### Tests
@@ -24,3 +24,8 @@ Python dashboard for project tracking system metrics
 ### Integrations
 - [ ] Github Action
 - [ ] Codecov
+
+
+### Print
+
+![](./images/screenshot.png)
