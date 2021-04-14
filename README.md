@@ -26,6 +26,6 @@ Python dashboard for project tracking system metrics
 - [ ] Codecov
 
 
-### Print
+### Screenshot
 
 ![](./images/screenshot.png)
