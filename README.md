@@ -28,4 +28,4 @@ Python dashboard for project tracking system metrics
 
 ### Screenshot
 
-![](./images/screenshot.png)
+![](./images/screen.png)
